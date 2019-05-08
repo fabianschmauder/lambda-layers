@@ -1,0 +1,15 @@
+{
+  "name": "lambda-functions",
+  "version": "1.0.0",
+  "description": "Lambda fuctions using layers",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "business-code": "1.0.0",
+    "moment": "^2.24.0",
+    "jest": "^24.7.1"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/fabianschmauder/lambda-layers.git"
+}

@@ -1,0 +1,30 @@
+service: lambda-layer-functions
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+
+functions:
+  hello:
+    handler: src/app/handler.hello
+    layers: # layer refs
+      - 'Fn::Join': # specify the business layer arn
+         - ':'
+         - - 'arn:aws:lambda'
+           - Ref: 'AWS::Region'
+           - Ref: 'AWS::AccountId'
+           - 'layer'
+           - 'dev-business-layer' # layer name
+           - '2' # version to update
+      - 'Fn::Join': # specify the dependencies layer arn
+         - ':'
+         - - 'arn:aws:lambda'
+           - Ref: 'AWS::Region'
+           - Ref: 'AWS::AccountId'
+           - 'layer'
+           - 'dev-dependencies-layer' # layer name
+           - '3' # version to update
+
+package:
+  exclude:
+    - node_modules/** # modules provided by layers

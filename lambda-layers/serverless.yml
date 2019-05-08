@@ -1,0 +1,27 @@
+service: lambda-layers
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+
+layers:
+  business:
+    path: businesslayer
+    name: ${self:provider.stage}-business-layer # optional
+    description: Description of what the lambda layer does # optional
+    compatibleRuntimes: # optional
+      - nodejs
+    licenseInfo: GPLv3 # optional
+    allowedAccounts:
+      - '*' # all accounts
+    retain: false # optional
+  dependencies:
+    path: dependencieslayer
+    name: ${self:provider.stage}-dependencies-layer # optional
+    description: Description of what the lambda layer does # optional
+    compatibleRuntimes: # optional
+      - nodejs
+    licenseInfo: GPLv3 # optional
+    allowedAccounts:
+      - '*' # all accounts
+    retain: false # optional

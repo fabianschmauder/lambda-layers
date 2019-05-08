@@ -1,0 +1,10 @@
+{
+  "name": "dependencies-layer",
+  "version": "1.0.0",
+  "description": "Lambda layer with libs",
+  "dependencies": {
+    "moment": "^2.24.0"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/fabianschmauder/lambda-layers.git"
+}

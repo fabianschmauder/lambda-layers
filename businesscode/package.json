@@ -1,0 +1,8 @@
+{
+  "name": "business-code",
+  "version": "1.0.0",
+  "description": "fancy business code",
+  "main": "index.js",
+  "license": "MIT",
+  "repository": "https://github.com/fabianschmauder/lambda-layers.git"
+}
