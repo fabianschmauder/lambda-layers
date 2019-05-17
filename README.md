@@ -14,10 +14,8 @@ You need a AWS account and the serverless cli and npm running.
 To deploy the setup and deploy the layers you can run the ``setup-deploy-layers.sh`` or execute the commands on your own.
 
 ```
-# link business code
-(cd businesscode; npm link)
 # install business code
-(cd lambda-layers/businesslayer/nodejs; npm link business-code)
+(cd lambda-layers/businesslayer/nodejs; npm install)
 # install dependencies code
 (cd lambda-layers/dependencieslayer/nodejs; npm install)
 # deploy layers
